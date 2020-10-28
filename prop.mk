@@ -326,3 +326,7 @@ ro.hw_timeout_multiplier=3
 # Skia
 PRODUCT_SYSTEM_PROPERTIES += \
 renderthread.skia.reduceopstasksplitting=true
+
+# Zygote
+PRODUCT_PROPERTY_OVERRIDES += \
+zygote.critical_window.minute=10
