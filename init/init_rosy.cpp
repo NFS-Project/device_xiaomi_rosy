@@ -128,4 +128,6 @@ void vendor_load_properties()
     property_override("ro.product.device", device);
     property_override("ro.build.description", description);
     property_override_triple("ro.build.fingerprint", "ro.system.build.fingerprint", "ro.vendor.build.fingerprint", fingerprint);
+
+    property_override("ro.apex.updatable", "false");
 }
