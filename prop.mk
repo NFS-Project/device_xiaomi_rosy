@@ -319,3 +319,8 @@ media.wfd.max_resolution=5
 # USAP
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 persist.device_config.runtime_native.usap_pool_enabled=true
+
+# SoC
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.soc.manufacturer=Qualcomm \
+ro.soc.model=MSM8953
