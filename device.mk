@@ -16,6 +16,9 @@
 
 $(call inherit-product, vendor/xiaomi/rosy/rosy-vendor.mk)
 
+TARGET_BOARD_PLATFORM := msm8953
+TARGET_BOARD_SUFFIX := _64
+
 # Apex
 PRODUCT_COMPRESSED_APEX := false
 
