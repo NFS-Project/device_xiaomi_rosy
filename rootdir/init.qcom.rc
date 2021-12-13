@@ -297,6 +297,12 @@ on property:sys.boot_completed=1
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
 
+service qcom-c_main-sh /vendor/bin/init.class_main.sh
+    class main
+    user root
+    group root system
+    oneshot
+
 on property:vold.decrypt=trigger_restart_framework
     restart vendor.camera-provider-2-4
     restart vendor.audio-hal-2-0
