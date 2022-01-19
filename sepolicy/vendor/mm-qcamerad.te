@@ -1,5 +1,3 @@
-typeattribute mm-qcamerad data_between_core_and_vendor_violators;
-
 binder_use(mm-qcamerad);
 
 get_prop(mm-qcamerad, camera_prop);
