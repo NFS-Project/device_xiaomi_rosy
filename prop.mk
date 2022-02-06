@@ -85,10 +85,6 @@ vendor.audio.feature.vbat.enable=true \
 vendor.audio.feature.wsa.enable=true \
 vendor.audio.read.wsatz.type=true
 
-# BPF
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.kernel.ebpf.supported=true
-
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
 bluetooth.hfp.client=1 \
