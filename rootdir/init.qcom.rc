@@ -314,6 +314,9 @@ on property:vold.decrypt=trigger_restart_framework
     restart vendor.audio-hal-2-0
     start wcnss-service
     restart vendor.fps_hal
+    restart vendor.qcrild
+    exec /bin/sleep 2
+    restart vendor.qcrild2
 
 service vendor.qrtr-ns /vendor/bin/qrtr-ns -f
     class core
