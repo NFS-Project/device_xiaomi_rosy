@@ -1,5 +1,6 @@
 camera.cpp.dumppreviewpayload			u:object_r:camera_prop:s0
 camera.cpp.dumpreprocesspayload			u:object_r:camera_prop:s0
+camera.cpp.dumpvideopayload     u:object_r:camera_prop:s0
 camera.dual.mode				u:object_r:camera_prop:s0
 camera.llvd.preview.disable			u:object_r:camera_prop:s0
 cameradaemon.SaveMemAtBoot			u:object_r:camera_prop:s0
