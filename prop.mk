@@ -321,3 +321,7 @@ persist.device_config.runtime_native.usap_pool_enabled=true
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.soc.manufacturer=Qualcomm \
 ro.soc.model=MSM8953
+
+# Watchdog
+PRODUCT_SYSTEM_PROPERTIES += \
+ro.hw_timeout_multiplier=3
