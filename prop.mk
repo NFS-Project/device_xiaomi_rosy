@@ -325,3 +325,7 @@ ro.soc.model=MSM8953
 # Watchdog
 PRODUCT_SYSTEM_PROPERTIES += \
 ro.hw_timeout_multiplier=3
+
+# Skia
+PRODUCT_SYSTEM_PROPERTIES += \
+renderthread.skia.reduceopstasksplitting=true
