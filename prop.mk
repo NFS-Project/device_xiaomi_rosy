@@ -4,8 +4,7 @@
 
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.config.media_vol_steps=25 \
-ro.config.vc_call_vol_steps=7
+ro.config.media_vol_steps=25
 
 PRODUCT_PROPERTY_OVERRIDES += \
 af.fast_track_multiplier=1 \
