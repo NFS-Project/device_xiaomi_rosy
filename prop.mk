@@ -317,10 +317,10 @@ media.wfd.max_resolution=5
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 persist.device_config.runtime_native.usap_pool_enabled=true
 
-# SoC
+# SOC
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.soc.manufacturer=Qualcomm \
-ro.soc.model=MSM8953
+ro.soc.model=SDM450
 
 # Watchdog
 PRODUCT_SYSTEM_PROPERTIES += \
