@@ -70,5 +70,6 @@
   <item name="bluetooth.controller.voltage">3700</item>
 
   <item name="battery.capacity">3300</item>
+  <item name="bluetooth.controller.voltage">3300</item>
 
 </device>
