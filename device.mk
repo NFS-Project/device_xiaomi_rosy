@@ -244,7 +244,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ims-ext-common \
     ims_ext_common.xml \
-    libims-shim
+    libgui_shim
 
 # IDC
 PRODUCT_COPY_FILES += \
