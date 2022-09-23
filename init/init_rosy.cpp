@@ -45,6 +45,11 @@ char const *heapsize;
 char const *heaptargetutilization;
 char const *heapminfree;
 char const *heapmaxfree;
+char const *model;
+char const *product;
+char const *device;
+char const *description;
+char const *fingerprint;
 
 void check_device()
 {
@@ -70,6 +75,12 @@ void check_device()
         heapminfree = "512k";
         heapmaxfree = "8m";
     }
+    // default device spec
+    model = "Redmi 5";
+    product = "rosy";
+    device = "rosy";
+    description = "raven-user 13 TP1A.220905.004 8927612 release-keys";
+    fingerprint = "google/raven/raven:13/TP1A.220905.004/8927612:user/release-keys";
 }
 
 void property_override(char const prop[], char const value[])
@@ -111,4 +122,10 @@ void vendor_load_properties()
     property_override("dalvik.vm.heaptargetutilization", heaptargetutilization);
     property_override("dalvik.vm.heapminfree", heapminfree);
     property_override("dalvik.vm.heapmaxfree", heapmaxfree);
+
+    property_override("ro.product.model", model);
+    property_override("ro.build.product", product);
+    property_override("ro.product.device", device);
+    property_override("ro.build.description", description);
+    property_override_triple("ro.build.fingerprint", "ro.system.build.fingerprint", "ro.vendor.build.fingerprint", fingerprint);
 }
