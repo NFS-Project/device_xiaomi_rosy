@@ -129,5 +129,7 @@ void vendor_load_properties()
     property_override("ro.build.description", description);
     property_override_triple("ro.build.fingerprint", "ro.system.build.fingerprint", "ro.vendor.build.fingerprint", fingerprint);
 
+    // Misc
     property_override("ro.apex.updatable", "false");
+    property_override("ro.iorapd.enable", "false");
 }
