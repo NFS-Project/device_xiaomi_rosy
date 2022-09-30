@@ -137,6 +137,10 @@ HWUI_COMPILE_FOR_PERF := true
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_rosy
 TARGET_RECOVERY_DEVICE_MODULES := libinit_rosy
 
+# IPA
+USE_DEVICE_SPECIFIC_DATA_IPA_CFG_MGR := true
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um
+
 # Media
 USE_DEVICE_SPECIFIC_MEDIA := true
 DEVICE_SPECIFIC_MEDIA_PATH := $(DEVICE_PATH)/qcom-caf/media
