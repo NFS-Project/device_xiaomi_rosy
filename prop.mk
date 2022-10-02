@@ -326,3 +326,7 @@ renderthread.skia.reduceopstasksplitting=true
 # Zygote
 PRODUCT_PROPERTY_OVERRIDES += \
 zygote.critical_window.minute=10
+
+# HEH filename encryption is being dropped
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.crypto.volume.filenames_mode=aes-256-cts
