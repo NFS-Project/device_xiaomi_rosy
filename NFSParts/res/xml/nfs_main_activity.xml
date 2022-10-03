@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:layout="@layout/xd_firmware_header" />
+        
+	<PreferenceCategory
+        android:title="@string/audio">
+
+        <PreferenceScreen
+            android:icon="@drawable/dirac_qs_tile_icon"
+            android:title="@string/dirac_title"
+            android:summary="@string/dirac_summary">
+            <intent
+                android:targetPackage="com.needforspeed.settings"
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.needforspeed.settings.dirac.DiracActivity" />
+        </PreferenceScreen>
+
+        <PreferenceScreen
+            android:icon="@drawable/ic_headphone"
+            android:title="@string/advanced_settings"
+            android:summary="@string/advanced_summary">
+            <intent
+                android:targetPackage="com.needforspeed.settings"
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.needforspeed.settings.soundcontrol.SoundControlSettingsActivity" />
+        </PreferenceScreen>
+
+        <PreferenceScreen
+            android:icon="@drawable/ic_speaker_cleaner_icon"
+            android:title="@string/clear_speaker_title"
+            android:summary="@string/clear_speaker_summary">
+            <intent
+                android:targetPackage="com.needforspeed.settings"
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.needforspeed.settings.speaker.ClearSpeakerActivity" />
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:title="@string/display">
+
+        <PreferenceScreen
+            android:icon="@drawable/ic_kcal"
+            android:title="@string/kcal_settings_title"
+            android:summary="@string/kcal_settings_summary">
+            <intent
+                android:targetPackage="com.needforspeed.settings"
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.needforspeed.settings.display.KcalSettingsActivity" />
+        </PreferenceScreen>
+
+        <PreferenceScreen
+            android:icon="@drawable/ic_parts_device"
+            android:title="@string/ambient_display_title">
+            <intent
+                android:targetPackage="com.needforspeed.settings"
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.needforspeed.settings.doze.DozeSettingsActivity" />
+        </PreferenceScreen>
+
+        <PreferenceScreen
+            android:icon="@drawable/ic_torch_icon"
+            android:title="@string/torch_title"
+            android:summary="@string/torch_summary">
+            <intent
+                android:targetPackage="com.needforspeed.settings"
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.needforspeed.settings.torch.TorchSettingsActivity" />
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/other" >
+        
+        <PreferenceScreen
+            android:icon="@drawable/ic_other"
+            android:title="@string/other_title"
+            android:summary="@string/other_summary">
+            <intent
+                android:targetPackage="com.needforspeed.settings"
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.needforspeed.settings.other.OtherActivity" />
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="vibration"
+        android:title="@string/vibration_title">
+
+        <PreferenceScreen
+            android:icon="@drawable/ic_vibrate"
+            android:title="@string/vibration_title">
+            <intent
+                android:targetPackage="com.needforspeed.settings"
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.needforspeed.settings.vibration.VibrationActivity" />
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:title="About">
+
+        <PreferenceScreen
+            android:icon="@drawable/ic_parts_device"
+            android:title="@string/about_anu_title">
+            <intent
+                android:targetPackage="com.needforspeed.settings"
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.needforspeed.settings.about.AboutActivity" />
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

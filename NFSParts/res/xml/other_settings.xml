@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <com.android.settingslib.widget.IllustrationPreference
+            android:key="other_logo"
+            app:lottie_rawRes="@drawable/other_logo"/>
+
+        <com.needforspeed.settings.preferences.SecureSettingSwitchPreference
+            android:key="fastcharge"
+            android:defaultValue="true"
+            android:title="@string/fastcharge_title"
+            android:icon="@drawable/ic_usb_fastcharge"
+            android:summary="@string/fastcharge_summary" />
+
+        <com.needforspeed.settings.preferences.SecureSettingSwitchPreference
+			android:key="fps_info"
+			android:icon="@drawable/ic_fps_info"
+			android:title="@string/fps_info_title"
+			android:summary="@string/fps_info_summary"
+			android:persistent="true"/>
+
+</PreferenceScreen>

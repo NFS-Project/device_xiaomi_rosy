@@ -11,3 +11,31 @@ dontaudit system_app {
   apex_service
   system_suspend_control_service
 }:service_manager find;
+
+# NFSParts
+allow system_app {
+    sysfs_hgain
+    sysfs_mgain
+    sysfs_sgain
+    sysfs_torch
+    kcal_dev
+    sysfs_vibrator
+    sysfs_fpsinfo
+}:file rw_file_perms;
+
+allow system_app {
+    sysfs_leds
+    kcal_dev
+    sysfs_vibrator
+    sysfs_fpsinfo
+}:dir search;
+
+allow system_app {
+    sysfs_vibrator
+}:file { read write };
+
+allow system_app {
+    sysfs_fastcharge
+    sysfs_fpboost
+    sysfs_fsync
+}:file { open read getattr write };

@@ -29,3 +29,14 @@ type proc_last_kmsg, fs_type, proc_type;
 
 # Rmt
 type debugfs_rmt, debugfs_type, fs_type;
+
+# NFSParts
+type kcal_dev, sysfs_type, fs_type;
+type sysfs_fpsinfo, sysfs_type, fs_type;
+type sysfs_fastcharge, sysfs_type, fs_type;
+type sysfs_fpboost, sysfs_type, fs_type;
+type sysfs_fsync, sysfs_type, fs_type;
+type sysfs_hgain, sysfs_type, fs_type;
+type sysfs_mgain, sysfs_type, fs_type;
+type sysfs_sgain, sysfs_type, fs_type;
+type sysfs_torch, sysfs_type, fs_type;

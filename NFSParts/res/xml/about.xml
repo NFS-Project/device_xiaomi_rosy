@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:layout="@layout/xd_about_phone_header" />
+
+    <PreferenceCategory
+        android:layout="@layout/nfs_about" />
+</PreferenceScreen>

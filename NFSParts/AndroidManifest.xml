@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2015-2016 The CyanogenMod Project
+                   2017-2021 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.needforspeed.settings"
+    android:versionCode="1"
+    android:versionName="1.0"
+    android:sharedUserId="android.uid.system">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.INJECT_EVENTS"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    
+    <protected-broadcast android:name="com.android.systemui.doze.pulse" />
+
+    <uses-sdk
+        android:minSdkVersion="24"
+        android:targetSdkVersion="24"/>
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/device_settings_app_name"
+        android:persistent="true"
+        android:theme="@style/Theme.SubSettingsBase">
+
+        <receiver android:name=".BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+ 
+        <activity
+            android:name=".NfsDeviceActivity"
+            android:exported="false"
+            android:label="@string/nfs_parts_title"
+	        android:launchMode="singleTask"
+	        android:theme="@style/Theme.SubSettingsBase">
+            <meta-data
+                android:name="com.android.settings.order"
+                android:value="1" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.dismiss"
+                android:value="9,13,30" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/nfs_parts_settings_summary" />
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.system" />
+            <meta-data
+               android:name="com.android.settings.icon"
+               android:resource="@drawable/ic_parts_device" />
+        </activity>
+ 
+        <activity
+            android:name=".soundcontrol.SoundControlSettingsActivity"
+            android:exported="false"
+            android:label="@string/advanced_settings"
+            android:theme="@style/Theme.SubSettingsBase">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.summary"
+                       android:resource="@string/advanced_summary" />
+        </activity>
+
+        <activity
+            android:name=".speaker.ClearSpeakerActivity"
+            android:label="@string/clear_speaker_title"
+            android:theme="@style/Theme.SubSettingsBase">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/clear_speaker_summary" />
+        </activity>
+
+        <activity
+            android:name=".dirac.DiracActivity"
+            android:label="@string/dirac_title"
+            android:theme="@style/Theme.SubSettingsBase">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+                <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES" />
+            </intent-filter>
+            <meta-data
+                       android:name="com.android.settings.summary"
+                       android:resource="@string/dirac_summary" />
+        </activity>
+
+        <activity
+            android:name=".doze.DozeSettingsActivity"
+            android:label="@string/ambient_display_title"
+            android:theme="@style/Theme.SubSettingsBase">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".torch.TorchSettingsActivity"
+            android:exported="false"
+            android:label="@string/torch_title"
+            android:theme="@style/Theme.SubSettingsBase">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.summary"
+                       android:resource="@string/torch_summary" />
+        </activity>
+
+        <activity
+            android:name=".vibration.VibrationActivity"
+            android:label="@string/vibration_title"
+            android:exported="false"
+            android:theme="@style/Theme.SubSettingsBase">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".about.AboutActivity"
+            android:label="@string/about_anu_title"
+            android:theme="@style/Theme.SubSettingsBase">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".other.OtherActivity"
+            android:label="@string/other_title"
+            android:theme="@style/Theme.SubSettingsBase">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.summary"
+                       android:resource="@string/other_summary" />
+        </activity>
+
+        <activity
+            android:name=".display.KcalSettingsActivity"
+            android:label="@string/kcal_settings_title"
+            android:theme="@style/Theme.SubSettingsBase">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/kcal_settings_summary" />
+        </activity>
+
+        <service
+            android:name=".doze.DozeService"
+            android:permission="XiaomiDozeService">
+        </service>
+
+        <service
+            android:name=".fps.FPSInfoService"
+            android:exported="false">
+        </service>
+
+        <service
+            android:name=".fps.FPSTileService"
+            android:icon="@drawable/ic_fps_tile"
+            android:label="@string/fps_info_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".dirac.DiracTileService"
+            android:icon="@drawable/dirac_qs_tile_icon"
+            android:label="@string/dirac_qs_tile_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+        
+        <service
+            android:name=".NFSPartsTile"
+            android:enabled="true"
+            android:icon="@drawable/qs_xiaomi"
+            android:label="@string/nfs_parts_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

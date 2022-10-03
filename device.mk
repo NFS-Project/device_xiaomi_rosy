@@ -187,10 +187,6 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.0.vendor \
     vendor.display.config@2.0
 
-# Doze mode
-PRODUCT_PACKAGES += \
-    XiaomiDoze
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
@@ -354,6 +350,7 @@ PRODUCT_PACKAGES += \
     init.msm.usb.configfs.rc \
     init.qcom.post_boot.sh \
     init.qcom.rc \
+    init.mrt.rc \
     init.qcom.sh \
     init.qcom.usb.rc \
     init.rosy.rc \
@@ -460,3 +457,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libdisplayconfig.qti \
     libstagefright_enc_common
+
+# NFSParts
+USE_NFSparts ?= true
+ifeq ($(USE_NFSparts),true)
+   PRODUCT_PACKAGES += \
+       NFSParts
+endif

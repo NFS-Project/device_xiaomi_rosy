@@ -1,0 +1,27 @@
+-keep class com.needforspeed.settings.soundcontrol.* {
+  *;
+}
+
+-keep class com.needforspeed.settings.speaker.* {
+  *;
+}
+
+-keep class com.needforspeed.settings.dirac.* {
+  *;
+}
+
+-keep class com.needforspeed.settings.doze.* {
+  *;
+}
+
+-keep class com.needforspeed.settings.torch.* {
+  *;
+}
+
+-keep class com.needforspeed.settings.vibration.* {
+  *;
+}
+
+-keep class com.needforspeed.settings.fps.* {
+  *;
+}

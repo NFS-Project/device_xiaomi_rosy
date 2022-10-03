@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <com.needforspeed.settings.preferences.SecureSettingSwitchPreference
+			android:key="vmax_override"
+			android:defaultValue="false"
+			android:icon="@drawable/ic_vibrate_override"
+			android:title="@string/vibration_override_title"/>
+
+        <com.needforspeed.settings.preferences.VibrationSeekBarPreference
+            android:defaultValue="60"
+            android:key="vibration_system"
+            android:max="100"
+            android:icon="@drawable/ic_vibrate"
+            android:title="@string/vibration_strength_title"
+            app:min="1"
+			app:units="%"/>
+
+        <com.needforspeed.settings.preferences.VibrationSeekBarPreference
+			android:defaultValue="60"
+			android:key="vibration_notification"
+			android:max="100"
+			android:title="@string/vibration_notification_title"
+			android:icon="@drawable/ic_vibrate_notif"
+			app:min="1"
+			app:units="%"/>
+
+		<com.needforspeed.settings.preferences.VibrationSeekBarPreference
+			android:defaultValue="60"
+			android:key="vibration_call"
+			android:max="100"
+			android:title="@string/vibration_call_title"
+			android:icon="@drawable/ic_vibrate_call"
+			app:min="1"
+			app:units="%"/>
+
+</PreferenceScreen>

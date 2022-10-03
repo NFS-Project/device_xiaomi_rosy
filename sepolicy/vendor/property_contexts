@@ -25,3 +25,6 @@ vendor.powerhal.				u:object_r:vendor_power_propg:s0
 vendor.wlan.driver.ath				u:object_r:vendor_wifi_prop:s0
 vendor.wlan.driver.config			u:object_r:vendor_wifi_prop:s0
 wifi.active.interface				u:object_r:vendor_wifi_prop:s0
+
+# NFSParts
+persist.audio.dirac.             u:object_r:dirac_prop:s0
