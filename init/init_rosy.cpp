@@ -79,8 +79,8 @@ void check_device()
     model = "Redmi 5";
     product = "rosy";
     device = "rosy";
-    description = "raven-user 13 TP1A.220905.004 8927612 release-keys";
-    fingerprint = "google/raven/raven:13/TP1A.220905.004/8927612:user/release-keys";
+    description = "raven-user 13 TP1A.221005.002 9012097 release-keys";
+    fingerprint = "google/raven/raven:13/TP1A.221005.002/9012097:user/release-keys";
 }
 
 void property_override(char const prop[], char const value[])
