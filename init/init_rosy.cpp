@@ -133,4 +133,5 @@ void vendor_load_properties()
     property_override("ro.apex.updatable", "false");
     property_override("ro.iorapd.enable", "false");
     property_override("dalvik.vm.systemuicompilerfilter", "speed");
+    property_override("ro.setupwizard.mode", "DISABLED");
 }
