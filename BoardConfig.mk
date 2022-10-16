@@ -48,7 +48,28 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_KERNEL_VERSION := 4.9
 TARGET_KERNEL_CONFIG := rosy-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/rosy
-TARGET_KERNEL_NEW_GCC_COMPILE := true
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_CLANG_VERSION := NFS
+TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-NFS
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu-
+TARGET_KERNEL_ADDITIONAL_FLAGS += \
+    LLVM=1 \
+    HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument" \
+    LLVM_IAS=1 \
+    CC=clang \
+    AR=llvm-ar \
+    AS=llvm-as \
+    LD=ld.lld \
+    NM=llvm-nm \
+    OBJCOPY=llvm-objcopy \
+    OBJDUMP=llvm-objdump \
+    OBJSIZE=llvm-size \
+    READELF=llvm-readelf \
+    STRIP=llvm-strip \
+    HOSTCC=clang \
+    HOSTCXX=clang++ \
+    HOSTLD=ld.lld \
+    HOSTAR=llvm-ar
 
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
