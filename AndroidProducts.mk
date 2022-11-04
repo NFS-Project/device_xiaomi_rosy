@@ -5,4 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_rosy.mk
+    $(LOCAL_DIR)/xtended_rosy.mk
+
+COMMON_LUNCH_CHOICES := \
+    xtended_rosy-user \
+    xtended_rosy-userdebug \
+    xtended_rosy-eng
