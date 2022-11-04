@@ -9,8 +9,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk)
 
-# Inherit some common PixelExperience stuff
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common Spark-OS stuff.
+$(call inherit-product, vendor/spark/config/common_full_phone.mk)
 
 # Pixel customization
 TARGET_SUPPORTS_GOOGLE_RECORDER := false
@@ -20,8 +20,15 @@ TARGET_INCLUDE_LIVE_WALLPAPERS := false
 # Inherit from rosy device
 $(call inherit-product, device/xiaomi/rosy/device.mk)
 
+# Spark-OS Propertie
+PRODUCT_SYSTEM_PROPERTIES += \
+ro.spark.device.name=Redmi 5 \
+ro.spark.group.url=https://t.me/cri_grup \
+ro.spark.maintainer=NFS-Project™ \
+ro.spark.maintainer.username=MeiSitaL0mAnia
+
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := aosp_rosy
+PRODUCT_NAME := spark_rosy
 PRODUCT_DEVICE := rosy
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 5
