@@ -335,3 +335,21 @@ zygote.critical_window.minute=10
 # HEH filename encryption is being dropped
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.crypto.volume.filenames_mode=aes-256-cts
+
+# Suppress several logspams on all builds
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.log.tag.GoogleInputMethodService=S \
+persist.log.tag.Diag_Lib=S \
+persist.log.tag.Tethering=S \
+persist.log.tag.NetlinkSocket=S \
+persist.log.tag.CompatibilityChangeReporter=S \
+persist.log.tag.WindowManager=S \
+persist.log.tag.System=S \
+persist.log.tag.TelephonyProvider=S \
+persist.log.tag.ziparchive=S \
+persist.log.tag.msm8974_platform=S \
+persist.log.tag.QC-time-services=S \
+persist.log.tag.OMXNodeInstance=S \
+persist.log.tag.BoundBrokerSvc=S \
+persist.log.tag.MediaDataManager=S \
+persist.log.tag.SoLoader=S
