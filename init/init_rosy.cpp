@@ -134,4 +134,5 @@ void vendor_load_properties()
     property_override("ro.iorapd.enable", "false");
     property_override("dalvik.vm.systemuicompilerfilter", "speed");
     property_override("ro.setupwizard.mode", "DISABLED");
+    property_override("bluetooth.device.default_name", "Redmi 5");
 }
