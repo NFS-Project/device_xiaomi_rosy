@@ -43,9 +43,6 @@ QCOM_SOONG_NAMESPACE := \
 # Speed profile services and wifi-service to reduce RAM and storage.
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
-# Do not generate libartd. (on userdebug/eng as well)
-PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
@@ -422,6 +419,9 @@ PRODUCT_COPY_FILES += \
 # Always preopt extracted APKs to prevent extracting out of the APK
 # for gms modules.
 PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
+USE_DEX2OAT_DEBUG := false
 
 # Vibrator
 PRODUCT_PACKAGES += \
