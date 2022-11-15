@@ -132,6 +132,7 @@ debug.renderengine.backend=skiaglthreaded \
 debug.sf.enable_hwc_vds=1 \
 debug.sf.hw=0 \
 debug.sf.latch_unsignaled=1 \
+debug.sf.auto_latch_unsignaled=false \
 debug.sf.recomputecrop=0 \
 debug.sf.disable_client_composition_cache=1 \
 debug.sf.use_phase_offsets_as_durations=1 \
