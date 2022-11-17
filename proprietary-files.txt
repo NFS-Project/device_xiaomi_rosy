@@ -1624,7 +1624,5 @@ vendor/bin/time_daemon|a27ac4aeafb41158b96046edbd553ae76835b4ed
 vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
 vendor/lib64/libtime_genoff.so|3f57de1aeb7aa113a0a579cebed85ab4405b9b49
 
-# Misc
-product/etc/res/animation.txt:product/etc/res/values/charger/animation.txt
-product/etc/res/battery_scale.png:product/etc/res/images/charger/battery_scale.png
-product/etc/res/battery_font.png:product/etc/res/images/charger/battery_font.png
+# Power-off charging daemon
+-sbin/charger:bin/chargeonlymode|664dfa548b81cac348f1699222160f8d2b4d247c
