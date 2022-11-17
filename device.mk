@@ -329,6 +329,10 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel
 
+# Poweroff charge
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/sbin/chargeonlymode:$(TARGET_COPY_OUT_SYSTEM)/bin/chargeonlymode
+
 # Properties
 -include device/xiaomi/rosy/prop.mk
 
